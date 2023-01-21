@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import JSONFILE from "./Testing_Data.json";
+
 function App() {
   const [searchValue, setSearchValue] = useState("");
   return (
@@ -19,6 +20,8 @@ function App() {
           val.first_name.toLowerCase().includes(searchValue.toLowerCase())
         ) {
           return val;
+        } else {
+          return false; // return false when the condition is not met
         }
       }).map((val, key) => {
         return (
