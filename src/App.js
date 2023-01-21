@@ -13,7 +13,7 @@ function App() {
         }}
       />
       {JSONFILE.filter((val) => {
-        if (searchValue == "") {
+        if (searchValue === "") {
           return val;
         } else if (
           val.first_name.toLowerCase().includes(searchValue.toLowerCase())
